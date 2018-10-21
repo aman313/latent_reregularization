@@ -2,16 +2,16 @@
   "dataset_reader": {
     "type": "seq2seq"
   },
-  "train_data_path": "train.txt",
-  "validation_data_path": "validate.txt",
-  "test_data_path": "test.txt",
+  "train_data_path": "SCAN-master/simple_split/train.txt",
+  "validation_data_path": "SCAN-master/simple_split/validate.txt",
+  "test_data_path": "SCAN-master/simple_split/test.txt",
   "model": {
-    "type": "simple_seq2seq",
+    "type": "simple_seq2seq_with_metrics",
     "source_embedder": {
       "token_embedders": {
         "tokens": {
             "type": "embedding",
-            "embedding_dim": 300,
+            "embedding_dim": 100,
             "trainable": true
         }
       }
@@ -19,12 +19,12 @@
     "encoder": {
         "type": "lstm",
         "bidirectional": false,
-        "input_size": 300,
+        "input_size": 100,
         "hidden_size": 200,
         "num_layers": 2,
         "dropout": 0.5
     },
-    "max_decoding_steps":50,
+    "max_decoding_steps":70,
     "scheduled_sampling_ratio":0.5
   },
   "iterator": {
@@ -33,10 +33,11 @@
     "batch_size": 1
   },
   "trainer": {
-    "num_epochs": 75,
+    "num_epochs": 8,
     "grad_norm": 5.0,
     "patience" : 75,
     "cuda_device" : 0,
+    "validation_metric":"+sequence_accuracy",
     "learning_rate_scheduler": {
       "type": "reduce_on_plateau",
       "factor": 0.5,
