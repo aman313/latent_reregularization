@@ -1,0 +1,11 @@
+2018-10-26 19:46:08,088 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.dataset_reader.DatasetReader'> from params {'type': 'seq2seq'} and extras {}
+2018-10-26 19:46:08,088 - INFO - allennlp.common.params - dataset_reader.type = seq2seq
+2018-10-26 19:46:08,088 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.seq2seq.Seq2SeqDatasetReader'> from params {} and extras {}
+2018-10-26 19:46:08,089 - INFO - allennlp.common.params - dataset_reader.source_token_indexers = <allennlp.common.params.Params object at 0x7fc322e66400>
+2018-10-26 19:46:08,089 - INFO - allennlp.common.params - dataset_reader.target_token_indexers = <allennlp.common.params.Params object at 0x7fc322e66400>
+2018-10-26 19:46:08,089 - INFO - allennlp.common.params - dataset_reader.source_add_start_token = True
+2018-10-26 19:46:08,089 - INFO - allennlp.common.params - dataset_reader.lazy = False
+2018-10-26 19:46:08,290 - INFO - allennlp.common.params - validation_dataset_reader = None
+2018-10-26 19:46:08,290 - INFO - allennlp.common.params - train_data_path = /home/viper/work/scan/latent_reregularization/SCAN-master/simple_split/train.txt
+2018-10-26 19:46:08,290 - INFO - allennlp.commands.train - Reading training data from /home/viper/work/scan/latent_reregularization/SCAN-master/simple_split/train.txt
+2018-10-26 19:46:08,290 - INFO - allennlp.data.dataset_readers.seq2seq - Reading instances from lines in file at: /home/viper/work/scan/latent_reregularization/SCAN-master/simple_split/train.txt
