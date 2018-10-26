@@ -2,11 +2,11 @@
   "dataset_reader": {
     "type": "seq2seq"
   },
-  "train_data_path": "/home/viper/work/scan/latent_reregularization/SCAN-master/simple_split/train.txt",
-  "validation_data_path": "/home/viper/work/scan/latent_reregularization/SCAN-master/simple_split/validate.txt",
-  "test_data_path": "/home/viper/work/scan/latent_reregularization/SCAN-master/simple_split/test.txt",
+  "train_data_path": "SCAN-master/simple_split/train.txt",
+  "validation_data_path": "SCAN-master/simple_split/validate.txt",
+  "test_data_path": "SCAN-master/simple_split/test.txt",
   "model": {
-    "type": "simple_seq2seq_with_metrics",
+    "type": "simple_seq2seq_with_metrics_decorated",
     "source_embedder": {
       "token_embedders": {
         "tokens": {

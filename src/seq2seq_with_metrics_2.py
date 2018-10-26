@@ -24,10 +24,10 @@ def my_logger(orig_func):
 	@wraps(orig_func)
 	def wrapper(*args, **kwargs):
 		logging.info('Args: {}, Kwargs: {}'.format(args, kwargs))
-		return orig_func(*args, *kwargs)
+		return orig_func(*args, **kwargs)
 	return wrapper
 
-@Model.register("simple_seq2seq_with_metrics")
+@Model.register("simple_seq2seq_with_metrics_decorated")
 class SimpleSeq2SeqWithMetrics(Model):
     """
     This ``SimpleSeq2Seq`` class is a :class:`Model` which takes a sequence, encodes it, and then

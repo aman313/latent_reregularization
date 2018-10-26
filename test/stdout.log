@@ -142,3 +142,1946 @@
 ),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 14, 10, 12, 17, 18,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 7, 2, 2, 7, 7, 5]], device='cuda:0')}}
 Inside Wrapper
 
+2018-10-27 00:40:03,656 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.dataset_reader.DatasetReader'> from params {'type': 'seq2seq'} and extras {}
+2018-10-27 00:40:03,656 - INFO - allennlp.common.params - dataset_reader.type = seq2seq
+2018-10-27 00:40:03,657 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.seq2seq.Seq2SeqDatasetReader'> from params {} and extras {}
+2018-10-27 00:40:03,657 - INFO - allennlp.common.params - dataset_reader.source_token_indexers = <allennlp.common.params.Params object at 0x7f497fc53b70>
+2018-10-27 00:40:03,657 - INFO - allennlp.common.params - dataset_reader.target_token_indexers = <allennlp.common.params.Params object at 0x7f497fc53b70>
+2018-10-27 00:40:03,657 - INFO - allennlp.common.params - dataset_reader.source_add_start_token = True
+2018-10-27 00:40:03,657 - INFO - allennlp.common.params - dataset_reader.lazy = False
+2018-10-27 00:40:03,936 - INFO - allennlp.common.params - validation_dataset_reader = None
+2018-10-27 00:40:03,936 - INFO - allennlp.common.params - train_data_path = SCAN-master/simple_split/train.txt
+2018-10-27 00:40:03,936 - INFO - allennlp.commands.train - Reading training data from SCAN-master/simple_split/train.txt
+2018-10-27 00:40:03,937 - INFO - allennlp.data.dataset_readers.seq2seq - Reading instances from lines in file at: SCAN-master/simple_split/train.txt
+2018-10-27 00:40:17,355 - INFO - allennlp.common.params - validation_data_path = SCAN-master/simple_split/validate.txt
+2018-10-27 00:40:17,355 - INFO - allennlp.commands.train - Reading validation data from SCAN-master/simple_split/validate.txt
+2018-10-27 00:40:17,355 - INFO - allennlp.data.dataset_readers.seq2seq - Reading instances from lines in file at: SCAN-master/simple_split/validate.txt
+2018-10-27 00:40:18,397 - INFO - allennlp.common.params - test_data_path = SCAN-master/simple_split/test.txt
+2018-10-27 00:40:18,397 - INFO - allennlp.commands.train - Reading test data from SCAN-master/simple_split/test.txt
+2018-10-27 00:40:18,398 - INFO - allennlp.data.dataset_readers.seq2seq - Reading instances from lines in file at: SCAN-master/simple_split/test.txt
+2018-10-27 00:40:22,035 - INFO - allennlp.commands.train - From dataset instances, test, train, validation will be considered for vocabulary creation.
+2018-10-27 00:40:22,035 - INFO - allennlp.common.params - vocabulary.type = None
+2018-10-27 00:40:22,035 - INFO - allennlp.common.params - vocabulary.extend = False
+2018-10-27 00:40:22,035 - INFO - allennlp.common.params - vocabulary.directory_path = None
+2018-10-27 00:40:22,035 - INFO - allennlp.common.params - vocabulary.min_count = None
+2018-10-27 00:40:22,036 - INFO - allennlp.common.params - vocabulary.max_vocab_size = None
+2018-10-27 00:40:22,036 - INFO - allennlp.common.params - vocabulary.non_padded_namespaces = ('*tags', '*labels')
+2018-10-27 00:40:22,036 - INFO - allennlp.common.params - vocabulary.min_pretrained_embeddings = None
+2018-10-27 00:40:22,036 - INFO - allennlp.common.params - vocabulary.only_include_pretrained_words = False
+2018-10-27 00:40:22,036 - INFO - allennlp.common.params - vocabulary.tokens_to_add = None
+2018-10-27 00:40:22,036 - INFO - allennlp.data.vocabulary - Fitting token dictionary from dataset.
+2018-10-27 00:40:22,582 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.models.model.Model'> from params {'encoder': {'bidirectional': False, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 100, 'num_layers': 2, 'type': 'lstm'}, 'max_decoding_steps': 70, 'scheduled_sampling_ratio': 0.5, 'source_embedder': {'token_embedders': {'tokens': {'embedding_dim': 100, 'trainable': True, 'type': 'embedding'}}}, 'type': 'simple_seq2seq_with_metrics_decorated'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x7f497fc53fd0>}
+2018-10-27 00:40:22,582 - INFO - allennlp.common.params - model.type = simple_seq2seq_with_metrics_decorated
+2018-10-27 00:40:22,582 - INFO - allennlp.common.from_params - instantiating class <class 'src.seq2seq_with_metrics_2.SimpleSeq2SeqWithMetrics'> from params {'encoder': {'bidirectional': False, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 100, 'num_layers': 2, 'type': 'lstm'}, 'max_decoding_steps': 70, 'scheduled_sampling_ratio': 0.5, 'source_embedder': {'token_embedders': {'tokens': {'embedding_dim': 100, 'trainable': True, 'type': 'embedding'}}}} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x7f497fc53fd0>}
+2018-10-27 00:40:22,582 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.text_field_embedders.text_field_embedder.TextFieldEmbedder'> from params {'token_embedders': {'tokens': {'embedding_dim': 100, 'trainable': True, 'type': 'embedding'}}} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x7f497fc53fd0>}
+2018-10-27 00:40:22,582 - INFO - allennlp.common.params - model.source_embedder.type = basic
+2018-10-27 00:40:22,582 - INFO - allennlp.common.params - model.source_embedder.embedder_to_indexer_map = None
+2018-10-27 00:40:22,582 - INFO - allennlp.common.params - model.source_embedder.allow_unmatched_keys = False
+2018-10-27 00:40:22,583 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.token_embedders.token_embedder.TokenEmbedder'> from params {'embedding_dim': 100, 'trainable': True, 'type': 'embedding'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x7f497fc53fd0>}
+2018-10-27 00:40:22,583 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.type = embedding
+2018-10-27 00:40:22,583 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.num_embeddings = None
+2018-10-27 00:40:22,583 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.vocab_namespace = tokens
+2018-10-27 00:40:22,583 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.embedding_dim = 100
+2018-10-27 00:40:22,583 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.pretrained_file = None
+2018-10-27 00:40:22,583 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.projection_dim = None
+2018-10-27 00:40:22,583 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.trainable = True
+2018-10-27 00:40:22,583 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.padding_index = None
+2018-10-27 00:40:22,583 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.max_norm = None
+2018-10-27 00:40:22,583 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.norm_type = 2.0
+2018-10-27 00:40:22,583 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.scale_grad_by_freq = False
+2018-10-27 00:40:22,583 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.sparse = False
+2018-10-27 00:40:22,589 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': False, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 100, 'num_layers': 2, 'type': 'lstm'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x7f497fc53fd0>}
+2018-10-27 00:40:22,589 - INFO - allennlp.common.params - model.encoder.type = lstm
+2018-10-27 00:40:22,589 - INFO - allennlp.common.params - model.encoder.batch_first = True
+2018-10-27 00:40:22,589 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2018-10-27 00:40:22,589 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2018-10-27 00:40:22,589 - INFO - allennlp.common.params - model.encoder.bidirectional = False
+2018-10-27 00:40:22,589 - INFO - allennlp.common.params - model.encoder.dropout = 0.5
+2018-10-27 00:40:22,589 - INFO - allennlp.common.params - model.encoder.hidden_size = 200
+2018-10-27 00:40:22,590 - INFO - allennlp.common.params - model.encoder.input_size = 100
+2018-10-27 00:40:22,590 - INFO - allennlp.common.params - model.encoder.num_layers = 2
+2018-10-27 00:40:22,590 - INFO - allennlp.common.params - model.encoder.batch_first = True
+2018-10-27 00:40:22,594 - INFO - allennlp.common.params - model.max_decoding_steps = 70
+2018-10-27 00:40:22,594 - INFO - allennlp.common.params - model.target_namespace = tokens
+2018-10-27 00:40:22,594 - INFO - allennlp.common.params - model.target_embedding_dim = None
+2018-10-27 00:40:22,594 - INFO - allennlp.common.params - model.scheduled_sampling_ratio = 0.5
+2018-10-27 00:40:22,596 - WARNING - root - vocabulary serialization directory test/vocabulary is not empty
+2018-10-27 00:40:22,597 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.iterators.data_iterator.DataIterator'> from params {'batch_size': 1, 'sorting_keys': [['source_tokens', 'num_tokens']], 'type': 'bucket'} and extras {}
+2018-10-27 00:40:22,597 - INFO - allennlp.common.params - iterator.type = bucket
+2018-10-27 00:40:22,597 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.iterators.bucket_iterator.BucketIterator'> from params {'batch_size': 1, 'sorting_keys': [['source_tokens', 'num_tokens']]} and extras {}
+2018-10-27 00:40:22,597 - INFO - allennlp.common.params - iterator.sorting_keys = [['source_tokens', 'num_tokens']]
+2018-10-27 00:40:22,597 - INFO - allennlp.common.params - iterator.padding_noise = 0.1
+2018-10-27 00:40:22,597 - INFO - allennlp.common.params - iterator.biggest_batch_first = False
+2018-10-27 00:40:22,597 - INFO - allennlp.common.params - iterator.batch_size = 1
+2018-10-27 00:40:22,597 - INFO - allennlp.common.params - iterator.instances_per_epoch = None
+2018-10-27 00:40:22,598 - INFO - allennlp.common.params - iterator.max_instances_in_memory = None
+2018-10-27 00:40:22,598 - INFO - allennlp.common.params - iterator.cache_instances = False
+2018-10-27 00:40:22,598 - INFO - allennlp.common.params - iterator.track_epoch = False
+2018-10-27 00:40:22,598 - INFO - allennlp.common.params - iterator.maximum_samples_per_batch = None
+2018-10-27 00:40:22,598 - INFO - allennlp.common.params - validation_iterator = None
+2018-10-27 00:40:22,598 - INFO - allennlp.common.params - trainer.no_grad = ()
+2018-10-27 00:40:22,598 - INFO - allennlp.commands.train - Following parameters are Frozen  (without gradient):
+2018-10-27 00:40:22,598 - INFO - allennlp.commands.train - Following parameters are Tunable (with gradient):
+2018-10-27 00:40:22,598 - INFO - allennlp.commands.train - _source_embedder.token_embedder_tokens.weight
+2018-10-27 00:40:22,598 - INFO - allennlp.commands.train - _encoder._module.weight_ih_l0
+2018-10-27 00:40:22,598 - INFO - allennlp.commands.train - _encoder._module.weight_hh_l0
+2018-10-27 00:40:22,598 - INFO - allennlp.commands.train - _encoder._module.bias_ih_l0
+2018-10-27 00:40:22,598 - INFO - allennlp.commands.train - _encoder._module.bias_hh_l0
+2018-10-27 00:40:22,598 - INFO - allennlp.commands.train - _encoder._module.weight_ih_l1
+2018-10-27 00:40:22,598 - INFO - allennlp.commands.train - _encoder._module.weight_hh_l1
+2018-10-27 00:40:22,598 - INFO - allennlp.commands.train - _encoder._module.bias_ih_l1
+2018-10-27 00:40:22,598 - INFO - allennlp.commands.train - _encoder._module.bias_hh_l1
+2018-10-27 00:40:22,598 - INFO - allennlp.commands.train - _target_embedder.weight
+2018-10-27 00:40:22,598 - INFO - allennlp.commands.train - _decoder_cell.weight_ih
+2018-10-27 00:40:22,598 - INFO - allennlp.commands.train - _decoder_cell.weight_hh
+2018-10-27 00:40:22,599 - INFO - allennlp.commands.train - _decoder_cell.bias_ih
+2018-10-27 00:40:22,599 - INFO - allennlp.commands.train - _decoder_cell.bias_hh
+2018-10-27 00:40:22,599 - INFO - allennlp.commands.train - _output_projection_layer.weight
+2018-10-27 00:40:22,599 - INFO - allennlp.commands.train - _output_projection_layer.bias
+2018-10-27 00:40:22,599 - INFO - allennlp.common.params - trainer.patience = 75
+2018-10-27 00:40:22,599 - INFO - allennlp.common.params - trainer.validation_metric = +sequence_accuracy
+2018-10-27 00:40:22,599 - INFO - allennlp.common.params - trainer.shuffle = True
+2018-10-27 00:40:22,599 - INFO - allennlp.common.params - trainer.num_epochs = 8
+2018-10-27 00:40:22,599 - INFO - allennlp.common.params - trainer.cuda_device = 0
+2018-10-27 00:40:22,599 - INFO - allennlp.common.params - trainer.grad_norm = 5
+2018-10-27 00:40:22,599 - INFO - allennlp.common.params - trainer.grad_clipping = None
+2018-10-27 00:40:25,720 - INFO - allennlp.common.params - trainer.optimizer.type = adam
+2018-10-27 00:40:25,720 - INFO - allennlp.common.params - trainer.optimizer.parameter_groups = None
+2018-10-27 00:40:25,720 - INFO - allennlp.training.optimizers - Number of trainable parameters: 814023
+2018-10-27 00:40:25,722 - INFO - allennlp.common.registrable - instantiating registered subclass adam of <class 'allennlp.training.optimizers.Optimizer'>
+2018-10-27 00:40:25,722 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2018-10-27 00:40:25,722 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2018-10-27 00:40:25,722 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.type = reduce_on_plateau
+2018-10-27 00:40:25,722 - INFO - allennlp.common.registrable - instantiating registered subclass reduce_on_plateau of <class 'allennlp.training.learning_rate_schedulers.LearningRateScheduler'>
+2018-10-27 00:40:25,722 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2018-10-27 00:40:25,722 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2018-10-27 00:40:25,723 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.factor = 0.5
+2018-10-27 00:40:25,723 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.mode = max
+2018-10-27 00:40:25,723 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.patience = 75
+2018-10-27 00:40:25,723 - INFO - allennlp.common.params - trainer.num_serialized_models_to_keep = 20
+2018-10-27 00:40:25,723 - INFO - allennlp.common.params - trainer.keep_serialized_model_every_num_seconds = None
+2018-10-27 00:40:25,723 - INFO - allennlp.common.params - trainer.model_save_interval = None
+2018-10-27 00:40:25,723 - INFO - allennlp.common.params - trainer.summary_interval = 100
+2018-10-27 00:40:25,723 - INFO - allennlp.common.params - trainer.histogram_interval = None
+2018-10-27 00:40:25,724 - INFO - allennlp.common.params - trainer.should_log_parameter_statistics = True
+2018-10-27 00:40:25,724 - INFO - allennlp.common.params - trainer.should_log_learning_rate = False
+2018-10-27 00:40:25,727 - INFO - allennlp.common.params - evaluate_on_test = False
+2018-10-27 00:40:25,727 - INFO - allennlp.training.trainer - Beginning training.
+2018-10-27 00:40:25,727 - INFO - allennlp.training.trainer - Epoch 0/7
+2018-10-27 00:40:25,727 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2443.024
+2018-10-27 00:40:25,785 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 518
+2018-10-27 00:40:25,786 - INFO - allennlp.training.trainer - Training
+2018-10-27 00:40:27,029 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 14, 10, 12, 17, 18,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 7, 2, 2, 7, 7, 5]], device='cuda:0')}}
+2018-10-27 00:41:19,123 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.dataset_reader.DatasetReader'> from params {'type': 'seq2seq'} and extras {}
+2018-10-27 00:41:19,124 - INFO - allennlp.common.params - dataset_reader.type = seq2seq
+2018-10-27 00:41:19,125 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.seq2seq.Seq2SeqDatasetReader'> from params {} and extras {}
+2018-10-27 00:41:19,125 - INFO - allennlp.common.params - dataset_reader.source_token_indexers = <allennlp.common.params.Params object at 0x7ff75a336048>
+2018-10-27 00:41:19,126 - INFO - allennlp.common.params - dataset_reader.target_token_indexers = <allennlp.common.params.Params object at 0x7ff75a336048>
+2018-10-27 00:41:19,126 - INFO - allennlp.common.params - dataset_reader.source_add_start_token = True
+2018-10-27 00:41:19,126 - INFO - allennlp.common.params - dataset_reader.lazy = False
+2018-10-27 00:41:19,479 - INFO - allennlp.common.params - validation_dataset_reader = None
+2018-10-27 00:41:19,480 - INFO - allennlp.common.params - train_data_path = SCAN-master/simple_split/train.txt
+2018-10-27 00:41:19,480 - INFO - allennlp.commands.train - Reading training data from SCAN-master/simple_split/train.txt
+2018-10-27 00:41:19,480 - INFO - allennlp.data.dataset_readers.seq2seq - Reading instances from lines in file at: SCAN-master/simple_split/train.txt
+2018-10-27 00:41:44,580 - INFO - allennlp.common.params - validation_data_path = SCAN-master/simple_split/validate.txt
+2018-10-27 00:41:44,581 - INFO - allennlp.commands.train - Reading validation data from SCAN-master/simple_split/validate.txt
+2018-10-27 00:41:44,583 - INFO - allennlp.data.dataset_readers.seq2seq - Reading instances from lines in file at: SCAN-master/simple_split/validate.txt
+2018-10-27 00:41:47,058 - INFO - allennlp.common.params - test_data_path = SCAN-master/simple_split/test.txt
+2018-10-27 00:41:47,059 - INFO - allennlp.commands.train - Reading test data from SCAN-master/simple_split/test.txt
+2018-10-27 00:41:47,059 - INFO - allennlp.data.dataset_readers.seq2seq - Reading instances from lines in file at: SCAN-master/simple_split/test.txt
+2018-10-27 00:41:54,603 - INFO - allennlp.commands.train - From dataset instances, test, validation, train will be considered for vocabulary creation.
+2018-10-27 00:41:54,604 - INFO - allennlp.common.params - vocabulary.type = None
+2018-10-27 00:41:54,604 - INFO - allennlp.common.params - vocabulary.extend = False
+2018-10-27 00:41:54,604 - INFO - allennlp.common.params - vocabulary.directory_path = None
+2018-10-27 00:41:54,604 - INFO - allennlp.common.params - vocabulary.min_count = None
+2018-10-27 00:41:54,604 - INFO - allennlp.common.params - vocabulary.max_vocab_size = None
+2018-10-27 00:41:54,605 - INFO - allennlp.common.params - vocabulary.non_padded_namespaces = ('*tags', '*labels')
+2018-10-27 00:41:54,605 - INFO - allennlp.common.params - vocabulary.min_pretrained_embeddings = None
+2018-10-27 00:41:54,605 - INFO - allennlp.common.params - vocabulary.only_include_pretrained_words = False
+2018-10-27 00:41:54,605 - INFO - allennlp.common.params - vocabulary.tokens_to_add = None
+2018-10-27 00:41:54,605 - INFO - allennlp.data.vocabulary - Fitting token dictionary from dataset.
+2018-10-27 00:41:56,459 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.models.model.Model'> from params {'encoder': {'bidirectional': False, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 100, 'num_layers': 2, 'type': 'lstm'}, 'max_decoding_steps': 70, 'scheduled_sampling_ratio': 0.5, 'source_embedder': {'token_embedders': {'tokens': {'embedding_dim': 100, 'trainable': True, 'type': 'embedding'}}}, 'type': 'simple_seq2seq_with_metrics_decorated'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x7ff7d7d135f8>}
+2018-10-27 00:41:56,459 - INFO - allennlp.common.params - model.type = simple_seq2seq_with_metrics_decorated
+2018-10-27 00:41:56,460 - INFO - allennlp.common.from_params - instantiating class <class 'src.seq2seq_with_metrics_2.SimpleSeq2SeqWithMetrics'> from params {'encoder': {'bidirectional': False, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 100, 'num_layers': 2, 'type': 'lstm'}, 'max_decoding_steps': 70, 'scheduled_sampling_ratio': 0.5, 'source_embedder': {'token_embedders': {'tokens': {'embedding_dim': 100, 'trainable': True, 'type': 'embedding'}}}} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x7ff7d7d135f8>}
+2018-10-27 00:41:56,460 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.text_field_embedders.text_field_embedder.TextFieldEmbedder'> from params {'token_embedders': {'tokens': {'embedding_dim': 100, 'trainable': True, 'type': 'embedding'}}} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x7ff7d7d135f8>}
+2018-10-27 00:41:56,461 - INFO - allennlp.common.params - model.source_embedder.type = basic
+2018-10-27 00:41:56,462 - INFO - allennlp.common.params - model.source_embedder.embedder_to_indexer_map = None
+2018-10-27 00:41:56,462 - INFO - allennlp.common.params - model.source_embedder.allow_unmatched_keys = False
+2018-10-27 00:41:56,462 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.token_embedders.token_embedder.TokenEmbedder'> from params {'embedding_dim': 100, 'trainable': True, 'type': 'embedding'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x7ff7d7d135f8>}
+2018-10-27 00:41:56,463 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.type = embedding
+2018-10-27 00:41:56,463 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.num_embeddings = None
+2018-10-27 00:41:56,463 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.vocab_namespace = tokens
+2018-10-27 00:41:56,463 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.embedding_dim = 100
+2018-10-27 00:41:56,464 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.pretrained_file = None
+2018-10-27 00:41:56,464 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.projection_dim = None
+2018-10-27 00:41:56,464 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.trainable = True
+2018-10-27 00:41:56,464 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.padding_index = None
+2018-10-27 00:41:56,464 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.max_norm = None
+2018-10-27 00:41:56,464 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.norm_type = 2.0
+2018-10-27 00:41:56,464 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.scale_grad_by_freq = False
+2018-10-27 00:41:56,465 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.sparse = False
+2018-10-27 00:41:56,465 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': False, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 100, 'num_layers': 2, 'type': 'lstm'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x7ff7d7d135f8>}
+2018-10-27 00:41:56,466 - INFO - allennlp.common.params - model.encoder.type = lstm
+2018-10-27 00:41:56,466 - INFO - allennlp.common.params - model.encoder.batch_first = True
+2018-10-27 00:41:56,466 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2018-10-27 00:41:56,466 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2018-10-27 00:41:56,466 - INFO - allennlp.common.params - model.encoder.bidirectional = False
+2018-10-27 00:41:56,466 - INFO - allennlp.common.params - model.encoder.dropout = 0.5
+2018-10-27 00:41:56,467 - INFO - allennlp.common.params - model.encoder.hidden_size = 200
+2018-10-27 00:41:56,467 - INFO - allennlp.common.params - model.encoder.input_size = 100
+2018-10-27 00:41:56,467 - INFO - allennlp.common.params - model.encoder.num_layers = 2
+2018-10-27 00:41:56,467 - INFO - allennlp.common.params - model.encoder.batch_first = True
+2018-10-27 00:41:56,474 - INFO - allennlp.common.params - model.max_decoding_steps = 70
+2018-10-27 00:41:56,474 - INFO - allennlp.common.params - model.target_namespace = tokens
+2018-10-27 00:41:56,475 - INFO - allennlp.common.params - model.target_embedding_dim = None
+2018-10-27 00:41:56,475 - INFO - allennlp.common.params - model.scheduled_sampling_ratio = 0.5
+2018-10-27 00:43:21,060 - WARNING - root - vocabulary serialization directory test/vocabulary is not empty
+2018-10-27 00:43:21,062 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.iterators.data_iterator.DataIterator'> from params {'batch_size': 1, 'sorting_keys': [['source_tokens', 'num_tokens']], 'type': 'bucket'} and extras {}
+2018-10-27 00:43:21,062 - INFO - allennlp.common.params - iterator.type = bucket
+2018-10-27 00:43:21,063 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.iterators.bucket_iterator.BucketIterator'> from params {'batch_size': 1, 'sorting_keys': [['source_tokens', 'num_tokens']]} and extras {}
+2018-10-27 00:43:21,064 - INFO - allennlp.common.params - iterator.sorting_keys = [['source_tokens', 'num_tokens']]
+2018-10-27 00:43:21,064 - INFO - allennlp.common.params - iterator.padding_noise = 0.1
+2018-10-27 00:43:21,064 - INFO - allennlp.common.params - iterator.biggest_batch_first = False
+2018-10-27 00:43:21,065 - INFO - allennlp.common.params - iterator.batch_size = 1
+2018-10-27 00:43:21,065 - INFO - allennlp.common.params - iterator.instances_per_epoch = None
+2018-10-27 00:43:21,065 - INFO - allennlp.common.params - iterator.max_instances_in_memory = None
+2018-10-27 00:43:21,066 - INFO - allennlp.common.params - iterator.cache_instances = False
+2018-10-27 00:43:21,066 - INFO - allennlp.common.params - iterator.track_epoch = False
+2018-10-27 00:43:21,066 - INFO - allennlp.common.params - iterator.maximum_samples_per_batch = None
+2018-10-27 00:43:21,067 - INFO - allennlp.common.params - validation_iterator = None
+2018-10-27 00:43:21,068 - INFO - allennlp.common.params - trainer.no_grad = ()
+2018-10-27 00:43:21,071 - INFO - allennlp.commands.train - Following parameters are Frozen  (without gradient):
+2018-10-27 00:43:21,072 - INFO - allennlp.commands.train - Following parameters are Tunable (with gradient):
+2018-10-27 00:43:21,072 - INFO - allennlp.commands.train - _source_embedder.token_embedder_tokens.weight
+2018-10-27 00:43:21,073 - INFO - allennlp.commands.train - _encoder._module.weight_ih_l0
+2018-10-27 00:43:21,073 - INFO - allennlp.commands.train - _encoder._module.weight_hh_l0
+2018-10-27 00:43:21,073 - INFO - allennlp.commands.train - _encoder._module.bias_ih_l0
+2018-10-27 00:43:21,074 - INFO - allennlp.commands.train - _encoder._module.bias_hh_l0
+2018-10-27 00:43:21,074 - INFO - allennlp.commands.train - _encoder._module.weight_ih_l1
+2018-10-27 00:43:21,075 - INFO - allennlp.commands.train - _encoder._module.weight_hh_l1
+2018-10-27 00:43:21,075 - INFO - allennlp.commands.train - _encoder._module.bias_ih_l1
+2018-10-27 00:43:21,076 - INFO - allennlp.commands.train - _encoder._module.bias_hh_l1
+2018-10-27 00:43:21,076 - INFO - allennlp.commands.train - _target_embedder.weight
+2018-10-27 00:43:21,076 - INFO - allennlp.commands.train - _decoder_cell.weight_ih
+2018-10-27 00:43:21,077 - INFO - allennlp.commands.train - _decoder_cell.weight_hh
+2018-10-27 00:43:21,077 - INFO - allennlp.commands.train - _decoder_cell.bias_ih
+2018-10-27 00:43:21,078 - INFO - allennlp.commands.train - _decoder_cell.bias_hh
+2018-10-27 00:43:21,078 - INFO - allennlp.commands.train - _output_projection_layer.weight
+2018-10-27 00:43:21,078 - INFO - allennlp.commands.train - _output_projection_layer.bias
+2018-10-27 00:43:21,079 - INFO - allennlp.common.params - trainer.patience = 75
+2018-10-27 00:43:21,079 - INFO - allennlp.common.params - trainer.validation_metric = +sequence_accuracy
+2018-10-27 00:43:21,080 - INFO - allennlp.common.params - trainer.shuffle = True
+2018-10-27 00:43:21,080 - INFO - allennlp.common.params - trainer.num_epochs = 8
+2018-10-27 00:43:21,080 - INFO - allennlp.common.params - trainer.cuda_device = 0
+2018-10-27 00:43:21,081 - INFO - allennlp.common.params - trainer.grad_norm = 5
+2018-10-27 00:43:21,081 - INFO - allennlp.common.params - trainer.grad_clipping = None
+2018-10-27 00:43:23,363 - INFO - allennlp.common.params - trainer.optimizer.type = adam
+2018-10-27 00:43:23,363 - INFO - allennlp.common.params - trainer.optimizer.parameter_groups = None
+2018-10-27 00:43:23,363 - INFO - allennlp.training.optimizers - Number of trainable parameters: 814023
+2018-10-27 00:43:23,365 - INFO - allennlp.common.registrable - instantiating registered subclass adam of <class 'allennlp.training.optimizers.Optimizer'>
+2018-10-27 00:43:23,365 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2018-10-27 00:43:23,365 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2018-10-27 00:43:23,365 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.type = reduce_on_plateau
+2018-10-27 00:43:23,366 - INFO - allennlp.common.registrable - instantiating registered subclass reduce_on_plateau of <class 'allennlp.training.learning_rate_schedulers.LearningRateScheduler'>
+2018-10-27 00:43:23,366 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2018-10-27 00:43:23,366 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2018-10-27 00:43:23,366 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.factor = 0.5
+2018-10-27 00:43:23,366 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.mode = max
+2018-10-27 00:43:23,366 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.patience = 75
+2018-10-27 00:43:23,366 - INFO - allennlp.common.params - trainer.num_serialized_models_to_keep = 20
+2018-10-27 00:43:23,367 - INFO - allennlp.common.params - trainer.keep_serialized_model_every_num_seconds = None
+2018-10-27 00:43:23,367 - INFO - allennlp.common.params - trainer.model_save_interval = None
+2018-10-27 00:43:23,367 - INFO - allennlp.common.params - trainer.summary_interval = 100
+2018-10-27 00:43:23,367 - INFO - allennlp.common.params - trainer.histogram_interval = None
+2018-10-27 00:43:23,367 - INFO - allennlp.common.params - trainer.should_log_parameter_statistics = True
+2018-10-27 00:43:23,367 - INFO - allennlp.common.params - trainer.should_log_learning_rate = False
+2018-10-27 00:43:23,373 - INFO - allennlp.common.params - evaluate_on_test = False
+2018-10-27 00:43:23,373 - INFO - allennlp.training.trainer - Beginning training.
+2018-10-27 00:43:23,373 - INFO - allennlp.training.trainer - Epoch 0/7
+2018-10-27 00:43:23,373 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2466.16
+2018-10-27 00:43:23,439 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 518
+2018-10-27 00:43:23,440 - INFO - allennlp.training.trainer - Training
+2018-10-27 00:43:26,500 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 14, 10, 12, 17, 18,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 7, 2, 2, 7, 7, 5]], device='cuda:0')}}
+2018-10-27 00:48:50,862 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.dataset_reader.DatasetReader'> from params {'type': 'seq2seq'} and extras {}
+2018-10-27 00:48:50,862 - INFO - allennlp.common.params - dataset_reader.type = seq2seq
+2018-10-27 00:48:50,863 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.dataset_readers.seq2seq.Seq2SeqDatasetReader'> from params {} and extras {}
+2018-10-27 00:48:50,863 - INFO - allennlp.common.params - dataset_reader.source_token_indexers = <allennlp.common.params.Params object at 0x7fddcd9be668>
+2018-10-27 00:48:50,863 - INFO - allennlp.common.params - dataset_reader.target_token_indexers = <allennlp.common.params.Params object at 0x7fddcd9be668>
+2018-10-27 00:48:50,864 - INFO - allennlp.common.params - dataset_reader.source_add_start_token = True
+2018-10-27 00:48:50,864 - INFO - allennlp.common.params - dataset_reader.lazy = False
+2018-10-27 00:48:51,230 - INFO - allennlp.common.params - validation_dataset_reader = None
+2018-10-27 00:48:51,230 - INFO - allennlp.common.params - train_data_path = SCAN-master/simple_split/train.txt
+2018-10-27 00:48:51,230 - INFO - allennlp.commands.train - Reading training data from SCAN-master/simple_split/train.txt
+2018-10-27 00:48:51,231 - INFO - allennlp.data.dataset_readers.seq2seq - Reading instances from lines in file at: SCAN-master/simple_split/train.txt
+2018-10-27 00:49:13,699 - INFO - allennlp.common.params - validation_data_path = SCAN-master/simple_split/validate.txt
+2018-10-27 00:49:13,699 - INFO - allennlp.commands.train - Reading validation data from SCAN-master/simple_split/validate.txt
+2018-10-27 00:49:13,699 - INFO - allennlp.data.dataset_readers.seq2seq - Reading instances from lines in file at: SCAN-master/simple_split/validate.txt
+2018-10-27 00:49:15,481 - INFO - allennlp.common.params - test_data_path = SCAN-master/simple_split/test.txt
+2018-10-27 00:49:15,482 - INFO - allennlp.commands.train - Reading test data from SCAN-master/simple_split/test.txt
+2018-10-27 00:49:15,482 - INFO - allennlp.data.dataset_readers.seq2seq - Reading instances from lines in file at: SCAN-master/simple_split/test.txt
+2018-10-27 00:49:21,892 - INFO - allennlp.commands.train - From dataset instances, validation, test, train will be considered for vocabulary creation.
+2018-10-27 00:49:21,893 - INFO - allennlp.common.params - vocabulary.type = None
+2018-10-27 00:49:21,893 - INFO - allennlp.common.params - vocabulary.extend = False
+2018-10-27 00:49:21,894 - INFO - allennlp.common.params - vocabulary.directory_path = None
+2018-10-27 00:49:21,894 - INFO - allennlp.common.params - vocabulary.min_count = None
+2018-10-27 00:49:21,894 - INFO - allennlp.common.params - vocabulary.max_vocab_size = None
+2018-10-27 00:49:21,895 - INFO - allennlp.common.params - vocabulary.non_padded_namespaces = ('*tags', '*labels')
+2018-10-27 00:49:21,895 - INFO - allennlp.common.params - vocabulary.min_pretrained_embeddings = None
+2018-10-27 00:49:21,895 - INFO - allennlp.common.params - vocabulary.only_include_pretrained_words = False
+2018-10-27 00:49:21,895 - INFO - allennlp.common.params - vocabulary.tokens_to_add = None
+2018-10-27 00:49:21,896 - INFO - allennlp.data.vocabulary - Fitting token dictionary from dataset.
+2018-10-27 00:49:23,505 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.models.model.Model'> from params {'encoder': {'bidirectional': False, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 100, 'num_layers': 2, 'type': 'lstm'}, 'max_decoding_steps': 70, 'scheduled_sampling_ratio': 0.5, 'source_embedder': {'token_embedders': {'tokens': {'embedding_dim': 100, 'trainable': True, 'type': 'embedding'}}}, 'type': 'simple_seq2seq_with_metrics_decorated'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x7fddcd9be668>}
+2018-10-27 00:49:23,505 - INFO - allennlp.common.params - model.type = simple_seq2seq_with_metrics_decorated
+2018-10-27 00:49:23,505 - INFO - allennlp.common.from_params - instantiating class <class 'src.seq2seq_with_metrics_2.SimpleSeq2SeqWithMetrics'> from params {'encoder': {'bidirectional': False, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 100, 'num_layers': 2, 'type': 'lstm'}, 'max_decoding_steps': 70, 'scheduled_sampling_ratio': 0.5, 'source_embedder': {'token_embedders': {'tokens': {'embedding_dim': 100, 'trainable': True, 'type': 'embedding'}}}} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x7fddcd9be668>}
+2018-10-27 00:49:23,506 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.text_field_embedders.text_field_embedder.TextFieldEmbedder'> from params {'token_embedders': {'tokens': {'embedding_dim': 100, 'trainable': True, 'type': 'embedding'}}} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x7fddcd9be668>}
+2018-10-27 00:49:23,506 - INFO - allennlp.common.params - model.source_embedder.type = basic
+2018-10-27 00:49:23,506 - INFO - allennlp.common.params - model.source_embedder.embedder_to_indexer_map = None
+2018-10-27 00:49:23,506 - INFO - allennlp.common.params - model.source_embedder.allow_unmatched_keys = False
+2018-10-27 00:49:23,507 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.token_embedders.token_embedder.TokenEmbedder'> from params {'embedding_dim': 100, 'trainable': True, 'type': 'embedding'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x7fddcd9be668>}
+2018-10-27 00:49:23,507 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.type = embedding
+2018-10-27 00:49:23,507 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.num_embeddings = None
+2018-10-27 00:49:23,507 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.vocab_namespace = tokens
+2018-10-27 00:49:23,507 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.embedding_dim = 100
+2018-10-27 00:49:23,508 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.pretrained_file = None
+2018-10-27 00:49:23,508 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.projection_dim = None
+2018-10-27 00:49:23,508 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.trainable = True
+2018-10-27 00:49:23,508 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.padding_index = None
+2018-10-27 00:49:23,508 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.max_norm = None
+2018-10-27 00:49:23,508 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.norm_type = 2.0
+2018-10-27 00:49:23,508 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.scale_grad_by_freq = False
+2018-10-27 00:49:23,509 - INFO - allennlp.common.params - model.source_embedder.token_embedders.tokens.sparse = False
+2018-10-27 00:49:23,510 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.modules.seq2seq_encoders.seq2seq_encoder.Seq2SeqEncoder'> from params {'bidirectional': False, 'dropout': 0.5, 'hidden_size': 200, 'input_size': 100, 'num_layers': 2, 'type': 'lstm'} and extras {'vocab': <allennlp.data.vocabulary.Vocabulary object at 0x7fddcd9be668>}
+2018-10-27 00:49:23,511 - INFO - allennlp.common.params - model.encoder.type = lstm
+2018-10-27 00:49:23,511 - INFO - allennlp.common.params - model.encoder.batch_first = True
+2018-10-27 00:49:23,511 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2018-10-27 00:49:23,511 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2018-10-27 00:49:23,511 - INFO - allennlp.common.params - model.encoder.bidirectional = False
+2018-10-27 00:49:23,512 - INFO - allennlp.common.params - model.encoder.dropout = 0.5
+2018-10-27 00:49:23,512 - INFO - allennlp.common.params - model.encoder.hidden_size = 200
+2018-10-27 00:49:23,512 - INFO - allennlp.common.params - model.encoder.input_size = 100
+2018-10-27 00:49:23,512 - INFO - allennlp.common.params - model.encoder.num_layers = 2
+2018-10-27 00:49:23,512 - INFO - allennlp.common.params - model.encoder.batch_first = True
+2018-10-27 00:49:23,517 - INFO - allennlp.common.params - model.max_decoding_steps = 70
+2018-10-27 00:49:23,518 - INFO - allennlp.common.params - model.target_namespace = tokens
+2018-10-27 00:49:23,518 - INFO - allennlp.common.params - model.target_embedding_dim = None
+2018-10-27 00:49:23,518 - INFO - allennlp.common.params - model.scheduled_sampling_ratio = 0.5
+2018-10-27 00:49:37,376 - WARNING - root - vocabulary serialization directory test/vocabulary is not empty
+2018-10-27 00:49:37,377 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.iterators.data_iterator.DataIterator'> from params {'batch_size': 1, 'sorting_keys': [['source_tokens', 'num_tokens']], 'type': 'bucket'} and extras {}
+2018-10-27 00:49:37,377 - INFO - allennlp.common.params - iterator.type = bucket
+2018-10-27 00:49:37,378 - INFO - allennlp.common.from_params - instantiating class <class 'allennlp.data.iterators.bucket_iterator.BucketIterator'> from params {'batch_size': 1, 'sorting_keys': [['source_tokens', 'num_tokens']]} and extras {}
+2018-10-27 00:49:37,378 - INFO - allennlp.common.params - iterator.sorting_keys = [['source_tokens', 'num_tokens']]
+2018-10-27 00:49:37,378 - INFO - allennlp.common.params - iterator.padding_noise = 0.1
+2018-10-27 00:49:37,378 - INFO - allennlp.common.params - iterator.biggest_batch_first = False
+2018-10-27 00:49:37,378 - INFO - allennlp.common.params - iterator.batch_size = 1
+2018-10-27 00:49:37,379 - INFO - allennlp.common.params - iterator.instances_per_epoch = None
+2018-10-27 00:49:37,379 - INFO - allennlp.common.params - iterator.max_instances_in_memory = None
+2018-10-27 00:49:37,379 - INFO - allennlp.common.params - iterator.cache_instances = False
+2018-10-27 00:49:37,379 - INFO - allennlp.common.params - iterator.track_epoch = False
+2018-10-27 00:49:37,379 - INFO - allennlp.common.params - iterator.maximum_samples_per_batch = None
+2018-10-27 00:49:37,379 - INFO - allennlp.common.params - validation_iterator = None
+2018-10-27 00:49:37,380 - INFO - allennlp.common.params - trainer.no_grad = ()
+2018-10-27 00:49:37,380 - INFO - allennlp.commands.train - Following parameters are Frozen  (without gradient):
+2018-10-27 00:49:37,380 - INFO - allennlp.commands.train - Following parameters are Tunable (with gradient):
+2018-10-27 00:49:37,380 - INFO - allennlp.commands.train - _source_embedder.token_embedder_tokens.weight
+2018-10-27 00:49:37,381 - INFO - allennlp.commands.train - _encoder._module.weight_ih_l0
+2018-10-27 00:49:37,381 - INFO - allennlp.commands.train - _encoder._module.weight_hh_l0
+2018-10-27 00:49:37,381 - INFO - allennlp.commands.train - _encoder._module.bias_ih_l0
+2018-10-27 00:49:37,381 - INFO - allennlp.commands.train - _encoder._module.bias_hh_l0
+2018-10-27 00:49:37,381 - INFO - allennlp.commands.train - _encoder._module.weight_ih_l1
+2018-10-27 00:49:37,382 - INFO - allennlp.commands.train - _encoder._module.weight_hh_l1
+2018-10-27 00:49:37,382 - INFO - allennlp.commands.train - _encoder._module.bias_ih_l1
+2018-10-27 00:49:37,382 - INFO - allennlp.commands.train - _encoder._module.bias_hh_l1
+2018-10-27 00:49:37,382 - INFO - allennlp.commands.train - _target_embedder.weight
+2018-10-27 00:49:37,382 - INFO - allennlp.commands.train - _decoder_cell.weight_ih
+2018-10-27 00:49:37,382 - INFO - allennlp.commands.train - _decoder_cell.weight_hh
+2018-10-27 00:49:37,382 - INFO - allennlp.commands.train - _decoder_cell.bias_ih
+2018-10-27 00:49:37,383 - INFO - allennlp.commands.train - _decoder_cell.bias_hh
+2018-10-27 00:49:37,383 - INFO - allennlp.commands.train - _output_projection_layer.weight
+2018-10-27 00:49:37,383 - INFO - allennlp.commands.train - _output_projection_layer.bias
+2018-10-27 00:49:37,383 - INFO - allennlp.common.params - trainer.patience = 75
+2018-10-27 00:49:37,383 - INFO - allennlp.common.params - trainer.validation_metric = +sequence_accuracy
+2018-10-27 00:49:37,383 - INFO - allennlp.common.params - trainer.shuffle = True
+2018-10-27 00:49:37,383 - INFO - allennlp.common.params - trainer.num_epochs = 8
+2018-10-27 00:49:37,384 - INFO - allennlp.common.params - trainer.cuda_device = 0
+2018-10-27 00:49:37,384 - INFO - allennlp.common.params - trainer.grad_norm = 5
+2018-10-27 00:49:37,384 - INFO - allennlp.common.params - trainer.grad_clipping = None
+2018-10-27 00:49:39,331 - INFO - allennlp.common.params - trainer.optimizer.type = adam
+2018-10-27 00:49:39,331 - INFO - allennlp.common.params - trainer.optimizer.parameter_groups = None
+2018-10-27 00:49:39,332 - INFO - allennlp.training.optimizers - Number of trainable parameters: 814023
+2018-10-27 00:49:39,333 - INFO - allennlp.common.registrable - instantiating registered subclass adam of <class 'allennlp.training.optimizers.Optimizer'>
+2018-10-27 00:49:39,333 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2018-10-27 00:49:39,334 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2018-10-27 00:49:39,334 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.type = reduce_on_plateau
+2018-10-27 00:49:39,334 - INFO - allennlp.common.registrable - instantiating registered subclass reduce_on_plateau of <class 'allennlp.training.learning_rate_schedulers.LearningRateScheduler'>
+2018-10-27 00:49:39,334 - INFO - allennlp.common.params - Converting Params object to dict; logging of default values will not occur when dictionary parameters are used subsequently.
+2018-10-27 00:49:39,334 - INFO - allennlp.common.params - CURRENTLY DEFINED PARAMETERS: 
+2018-10-27 00:49:39,334 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.factor = 0.5
+2018-10-27 00:49:39,335 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.mode = max
+2018-10-27 00:49:39,335 - INFO - allennlp.common.params - trainer.learning_rate_scheduler.patience = 75
+2018-10-27 00:49:39,335 - INFO - allennlp.common.params - trainer.num_serialized_models_to_keep = 20
+2018-10-27 00:49:39,335 - INFO - allennlp.common.params - trainer.keep_serialized_model_every_num_seconds = None
+2018-10-27 00:49:39,335 - INFO - allennlp.common.params - trainer.model_save_interval = None
+2018-10-27 00:49:39,336 - INFO - allennlp.common.params - trainer.summary_interval = 100
+2018-10-27 00:49:39,336 - INFO - allennlp.common.params - trainer.histogram_interval = None
+2018-10-27 00:49:39,336 - INFO - allennlp.common.params - trainer.should_log_parameter_statistics = True
+2018-10-27 00:49:39,336 - INFO - allennlp.common.params - trainer.should_log_learning_rate = False
+2018-10-27 00:49:39,340 - INFO - allennlp.common.params - evaluate_on_test = False
+2018-10-27 00:49:39,342 - INFO - allennlp.training.trainer - Beginning training.
+2018-10-27 00:49:39,342 - INFO - allennlp.training.trainer - Epoch 0/7
+2018-10-27 00:49:39,342 - INFO - allennlp.training.trainer - Peak CPU memory usage MB: 2465.96
+2018-10-27 00:49:39,409 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 522
+2018-10-27 00:49:39,410 - INFO - allennlp.training.trainer - Training
+2018-10-27 00:49:42,455 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 14, 10, 12, 17, 18,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 7, 2, 2, 7, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:50,560 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 15, 11, 13, 16, 19, 15, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 3, 9, 3, 9, 3, 9, 3,
+         9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:53,900 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 14, 11, 12, 17, 22, 14, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 8, 3, 3, 8, 2, 2, 2, 2, 2, 2, 5]], device='cuda:0')}}
+2018-10-27 00:49:53,922 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 11, 16, 22, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 3, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:53,937 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 14, 10, 17, 19, 15, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 9, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:53,964 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 10, 12, 17, 21, 15, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 9, 2, 9, 3, 9, 3, 9, 3, 9, 3, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:53,986 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 15, 10, 13, 16, 22, 15, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2,
+         9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,023 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 11, 13, 17, 19, 15, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 3, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6,
+         3, 6, 3, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,051 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 15, 10, 16, 20, 15, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 8, 3, 8, 3, 8, 3, 8, 2, 7, 2, 7, 2, 7, 2, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,070 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 14, 11, 12, 16, 19, 15, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2,
+         6, 3, 3, 3, 3, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,098 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 11, 13, 16, 21, 14, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 9, 2, 2, 9, 3, 3, 3, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,114 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 15, 11, 17, 20, 15, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 9, 3, 9, 3, 9, 3, 9, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2,
+         8, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,140 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 13, 16, 22, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 2, 6, 6, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,154 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 14, 11, 17, 20, 10,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 7, 2, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,166 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 11, 17, 19, 10,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 7, 2, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,177 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 14, 11, 17, 19, 15, 11, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:54,199 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 14, 11, 12, 17, 18, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 3, 3, 3, 7, 3, 7, 3, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,215 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 14, 11, 13, 16, 18, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 7, 7, 3, 3, 8, 3, 3, 8, 3, 3, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,231 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 11, 12, 17, 18, 15, 11, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 9, 3, 9, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:54,255 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 11, 16, 18, 14, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 7, 2, 2, 7, 3, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,269 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 15, 10, 12, 17, 21, 14, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 9, 2, 2, 9, 2, 2, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,289 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 10, 12, 16, 21, 15, 10,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,307 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 10, 17, 20, 15, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 9, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2,
+         8, 2, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,334 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 14, 10, 12, 16, 20, 14, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 8, 2, 2, 7, 2, 2, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,349 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 14, 11, 17, 18, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 7, 3, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,362 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 12, 16, 20, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 8, 2, 8, 2, 8, 6, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,376 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 15, 11, 16, 21, 11, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 9, 3, 9, 3, 6, 3, 6, 3, 6, 3, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,396 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 14, 10, 13, 16, 18, 14, 10,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 7, 2, 2, 2, 2, 2, 2, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,413 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 15, 10, 12, 16, 18, 14, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:54,435 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 15, 10, 17, 20, 14, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 8, 2, 8, 2, 8, 2, 8, 3, 3, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,454 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 14, 10, 17, 22, 15, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 9, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,474 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 14, 11, 13, 17, 18, 14, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 9, 3, 3, 9, 3, 3, 9, 2, 2, 7, 2, 2, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,494 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 14, 10, 13, 16, 18, 14, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 7, 3, 3, 7, 3, 3, 7, 2, 2, 8, 2, 2, 8, 2, 2, 8, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:54,519 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 15, 11, 12, 16, 20, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 8, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:54,544 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 10, 12, 17, 18, 14, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 9, 2, 9, 2, 2, 7, 2, 2, 7, 2, 2, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,563 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 15, 10, 13, 16, 18,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7,
+         2, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,591 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 14, 10, 16, 20, 15, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2,
+         8, 2, 2, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,624 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 15, 11, 12, 17, 18, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 7, 3, 7, 3, 7, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:54,651 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 17, 19, 11, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 6, 3, 6, 3, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,666 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 11, 12, 16, 21, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 9, 9, 3, 8, 3, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,681 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 12, 16, 22, 14, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 3, 3, 3, 3, 9, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,699 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 15, 11, 17, 21, 14, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 8, 3, 8, 3, 8, 3, 8, 3, 3, 9, 3, 3, 9, 3, 3, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,722 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 14, 10, 13, 17, 19, 11, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 2, 2, 2, 2, 3, 6, 3, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,741 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 11, 17, 20, 15, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 8, 3, 8, 3, 8, 3, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,759 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 11, 17, 18, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 6, 3, 7, 3, 7, 3, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,778 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 11, 17, 22, 15, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 8, 3, 3, 3, 3, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,797 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 14, 10, 13, 17, 18, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 2, 2, 2, 2, 3, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,819 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 11, 13, 16, 18, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 7, 7, 7, 3, 8, 3, 8, 3, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,842 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 15, 10, 17, 19, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,863 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 12, 17, 18, 15, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 6, 6, 3, 7, 3, 7, 3, 7, 3, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,883 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 15, 11, 13, 17, 21, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3,
+         8, 9, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,916 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 15, 11, 12, 16, 19, 15, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3,
+         6, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:54,965 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 14, 11, 17, 20, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 3, 8, 3, 8, 3, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,982 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 12, 17, 20, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 9, 9, 3, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:54,997 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 15, 11, 12, 16, 19, 14, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 6, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:55,022 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 14, 11, 12, 16, 21, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 9, 2, 9, 2, 9, 3, 3, 9, 3, 3, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,044 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 10, 17, 22, 15, 10,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 9, 2, 2, 2, 2, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,060 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 10, 16, 18, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 7, 2, 7, 2, 7, 2, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,079 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 15, 11, 16, 19, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 6, 2, 6, 2, 6, 3, 3, 3, 3, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,108 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 16, 18, 14, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 7, 3, 3, 7, 3, 3, 7, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,132 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 11, 16, 19, 14, 10,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 6, 3, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,151 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 15, 11, 12, 17, 20, 15, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 2, 8, 2, 8, 2, 8, 2,
+         8, 2, 8, 2, 8, 2, 8, 2, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,193 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 14, 10, 12, 17, 19, 15, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 2, 2, 3, 6, 3, 6, 3, 6, 3, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,215 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 15, 10, 13, 17, 21, 15, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2,
+         6, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2,
+         9, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,264 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 17, 18, 15, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 6, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7,
+         2, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,297 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 14, 10, 12, 17, 21, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 2, 2, 3, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,314 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 15, 11, 13, 16, 19, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 6, 6, 6, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8,
+         3, 8, 3, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,347 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 15, 11, 12, 16, 21, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 9, 2, 9, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:55,375 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 15, 10, 12, 16, 18, 15, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3,
+         7, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:55,420 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 15, 10, 12, 17, 20, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 8, 2, 8, 2, 8, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:55,463 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 11, 12, 17, 22, 14, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 3, 3, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,484 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 12, 16, 18, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 7, 7, 9, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,502 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 15, 11, 12, 16, 18, 14, 10,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 7, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:55,536 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 14, 11, 16, 21, 14, 11, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 9, 3, 3, 9, 3, 3, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,559 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 14, 11, 12, 16, 18, 14, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 7, 2, 2, 7, 3, 3, 6, 3, 3, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,579 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 14, 11, 17, 22, 14, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 6, 2, 2, 2, 2, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,598 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 14, 11, 12, 17, 19, 15, 11, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 8, 3, 3, 8, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:55,632 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 17, 21, 15, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 8, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9,
+         3, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,663 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 10, 13, 17, 22, 14, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 6, 2, 6, 2, 6, 3, 3, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,680 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 15, 10, 12, 16, 22, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,707 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 10, 12, 16, 22, 14, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 2, 2, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,726 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 16, 20, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 8, 8, 8, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,743 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 11, 17, 20, 15, 10,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 7, 2, 8, 2, 8, 2, 8, 2, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,767 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 11, 13, 17, 21, 14, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 9, 3, 9, 3, 9, 2, 2, 9, 2, 2, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,789 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 14, 10, 12, 16, 19, 15, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 2, 6, 2, 2, 6, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:55,819 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 15, 10, 16, 18, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 7, 7, 2, 2, 2, 2, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,834 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 14, 10, 12, 17, 20, 14, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 9, 2, 2, 9, 2, 2, 8, 2, 2, 8, 2, 2, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,858 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 15, 10, 17, 18, 14, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 2, 2, 3, 3, 7, 3, 3, 7, 3, 3, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,880 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 12, 16, 19, 15, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 9, 9, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:55,905 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 15, 11, 13, 16, 20, 14, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 8, 2, 2, 8, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3,
+         9, 3, 9, 3, 9, 3, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,940 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 10, 12, 17, 21, 15, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:55,966 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 11, 12, 16, 22, 14, 10,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 3, 8, 3, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:55,983 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 17, 19, 15, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 8, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,010 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 14, 10, 13, 17, 18, 14, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 7, 2, 2, 7, 2, 2, 7, 2, 2, 7, 2, 2, 7, 2, 2, 7, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:56,035 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 14, 11, 17, 22, 15, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 2, 2, 2, 2, 2, 2, 2, 2, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,054 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 15, 10, 16, 21, 15, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 9, 2, 2, 2, 2, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:56,082 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 14, 10, 17, 21, 15, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 3, 9, 3, 9, 3, 9, 3, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,102 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 11, 17, 18, 15, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 9, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3,
+         7, 3, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,134 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 15, 11, 17, 18, 15, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 7, 3, 7, 3, 7, 3, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2,
+         7, 2, 7, 2, 7, 2, 7, 2, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,171 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 14, 10, 12, 16, 20, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 8, 2, 8, 2, 8, 2, 2, 7, 2, 2, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,219 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 16, 19,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 6, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,232 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 14, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,245 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 11, 12, 16, 22, 15, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,268 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 11, 12, 17, 21, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 8, 3, 8, 9, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,284 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 10, 17, 19, 15, 10,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 8, 2, 6, 2, 6, 2, 6, 2, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,304 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 14, 10, 12, 16, 20, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 8, 2, 8, 2, 2, 2, 2, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,321 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 10, 16, 20, 14, 11, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 8, 3, 3, 8, 2, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,347 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 14, 11, 12, 16, 21, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 9, 2, 9, 2, 9, 3, 3, 8, 3, 3, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,368 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 14, 10, 13, 16, 22, 14, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 3, 3, 3, 3, 2, 2, 6, 2, 2, 6, 2, 2, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,390 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 15, 11, 17, 19, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 3, 3, 6, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,406 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 15, 10, 17, 21, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 6, 2, 6, 2, 6, 2, 6, 2, 9, 2, 9, 2, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,429 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 10, 16, 21, 15, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 9, 3, 9, 3, 9, 3, 9, 2, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,448 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 14, 10, 16, 22, 14, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 2, 2, 2, 2, 2, 2, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,465 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 15, 10, 13, 17, 19, 14, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2,
+         8, 3, 3, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,494 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 15, 11, 17, 19, 15, 11, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 7, 3, 7, 3, 7, 3, 7, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3, 6, 3,
+         6, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,522 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 10, 13, 16, 18, 15, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 7, 2, 9, 2, 9, 2, 9, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:56,547 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 15, 11, 16, 21, 14, 10, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 9, 2, 2, 9, 2, 2, 9, 3, 6, 3, 6, 3, 6, 3, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,568 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 11, 12, 16, 19, 15, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 2, 6, 3, 8, 3, 8, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:56,591 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 14, 11, 12, 16, 20, 15, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 8, 3, 8, 3, 8, 3, 8, 3, 3, 6, 3, 3, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,611 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 15, 10, 17, 21, 10,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 7, 2, 7, 2, 7, 2, 7, 2, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,631 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 14, 11, 16, 21, 11, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 9, 3, 9, 3, 3, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,649 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 14, 11, 13, 17, 22, 15, 10,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 3, 3, 3, 3, 2, 2, 2, 2, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,666 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 14, 11, 12, 17, 18, 14, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 6, 3, 3, 6, 3, 3, 7, 3, 3, 7, 3, 3, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,685 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 12, 17, 21, 15, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 9, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3, 9, 3,
+         9, 3, 9, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,712 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 19, 14, 11, 16, 20, 11, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 8, 3, 8, 3, 3, 6, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,726 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 14, 10, 16, 22, 15, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 3, 3, 2, 2, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,740 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 14, 10, 13, 16, 19, 14, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 6, 2, 2, 6, 2, 2, 8, 2, 2, 8, 2, 2, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,759 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 14, 10, 16, 20, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 8, 2, 8, 2, 2, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,774 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 21, 14, 11, 12, 17, 22, 14, 11, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 3, 3, 9, 3, 3, 9, 3, 3, 3, 3, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,791 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 18, 15, 11, 13, 16, 18, 14, 10, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 7, 2, 2, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3,
+         7, 3, 7, 3, 7, 3, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,826 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 14, 10, 13, 17, 20, 15, 11, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 2, 2, 2, 2, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 3, 8, 5]],
+       device='cuda:0')}}
+2018-10-27 00:49:56,858 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 10, 13, 17, 18, 15, 11, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 2, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7, 3, 7,
+         3, 7, 3, 7, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,893 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 22, 11, 16, 19, 13,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 6, 6, 6, 3, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,907 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 14, 10, 12, 17, 20, 14, 11,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 2, 2, 8, 2, 2, 8, 3, 3, 8, 5]], device='cuda:0')}}
+2018-10-27 00:49:56,927 - INFO - root - Args: (SimpleSeq2SeqWithMetrics(
+  (_source_embedder): BasicTextFieldEmbedder(
+    (token_embedder_tokens): Embedding()
+  )
+  (_encoder): PytorchSeq2SeqWrapper(
+    (_module): LSTM(100, 200, num_layers=2, batch_first=True, dropout=0.5)
+  )
+  (_target_embedder): Embedding()
+  (_decoder_cell): LSTMCell(100, 200)
+  (_output_projection_layer): Linear(in_features=200, out_features=23, bias=True)
+),), Kwargs: {'source_tokens': {'tokens': tensor([[ 4, 20, 15, 10, 13, 16, 21, 12,  5]], device='cuda:0')}, 'target_tokens': {'tokens': tensor([[4, 9, 9, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2, 8, 2,
+         8, 2, 8, 5]], device='cuda:0')}}
