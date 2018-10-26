@@ -1,0 +1,54 @@
+0it [00:00, ?it/s]
+4807it [00:10, 480.62it/s]
+9614it [00:20, 478.66it/s]
+14409it [00:30, 478.90it/s]
+15459it [00:32, 478.97it/s]
+
+0it [00:00, ?it/s]
+1269it [00:02, 484.77it/s]
+
+0it [00:00, ?it/s]
+4182it [00:08, 484.52it/s]
+
+0it [00:00, ?it/s]
+20910it [00:02, 9525.94it/s]
+
+  0%|          | 0/15459 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/viper/.eclipse/360744347_linux_gtk_x86_64/plugins/org.python.pydev.core_6.5.0.201809011628/pysrc/pydevd.py", line 1767, in <module>
+    main()
+  File "/home/viper/.eclipse/360744347_linux_gtk_x86_64/plugins/org.python.pydev.core_6.5.0.201809011628/pysrc/pydevd.py", line 1752, in main
+    debugger.connect(host, port)
+  File "/home/viper/.eclipse/360744347_linux_gtk_x86_64/plugins/org.python.pydev.core_6.5.0.201809011628/pysrc/pydevd.py", line 1108, in run
+    return self._exec(is_module, entry_point_fn, module_name, file, globals, locals)
+  File "/home/viper/.eclipse/360744347_linux_gtk_x86_64/plugins/org.python.pydev.core_6.5.0.201809011628/pysrc/pydevd.py", line 1115, in _exec
+    pydev_imports.execfile(file, globals, locals)  # execute the script
+  File "/home/viper/.eclipse/360744347_linux_gtk_x86_64/plugins/org.python.pydev.core_6.5.0.201809011628/pysrc/_pydev_imps/_pydev_execfile.py", line 25, in execfile
+    exec(compile(contents+"\n", file, 'exec'), glob, loc)
+  File "/home/viper/anaconda3/lib/python3.6/site-packages/allennlp/run.py", line 18, in <module>
+    main(prog="allennlp")
+  File "/home/viper/anaconda3/lib/python3.6/site-packages/allennlp/commands/__init__.py", line 72, in main
+    args.func(args)
+  File "/home/viper/anaconda3/lib/python3.6/site-packages/allennlp/commands/train.py", line 111, in train_model_from_args
+    args.force)
+  File "/home/viper/anaconda3/lib/python3.6/site-packages/allennlp/commands/train.py", line 142, in train_model_from_file
+    return train_model(params, serialization_dir, file_friendly_logging, recover, force)
+  File "/home/viper/anaconda3/lib/python3.6/site-packages/allennlp/commands/train.py", line 346, in train_model
+    metrics = trainer.train()
+  File "/home/viper/anaconda3/lib/python3.6/site-packages/allennlp/training/trainer.py", line 751, in train
+    train_metrics = self._train_epoch(epoch)
+  File "/home/viper/anaconda3/lib/python3.6/site-packages/allennlp/training/trainer.py", line 494, in _train_epoch
+    loss = self.batch_loss(batch, for_training=True)
+  File "/home/viper/anaconda3/lib/python3.6/site-packages/allennlp/training/trainer.py", line 429, in batch_loss
+    output_dict = self.model(**batch)
+  File "/home/viper/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py", line 477, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/viper/anaconda3/lib/python3.6/seq2seq_with_metrics.py", line 27, in wrapper
+    return orig_func(*args, *kwargs)
+  File "/home/viper/anaconda3/lib/python3.6/seq2seq_with_metrics.py", line 136, in forward
+    embedded_input = self._source_embedder(source_tokens)
+  File "/home/viper/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py", line 477, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/viper/anaconda3/lib/python3.6/site-packages/allennlp/modules/text_field_embedders/basic_text_field_embedder.py", line 67, in forward
+    if self._token_embedders.keys() != text_field_input.keys():
+AttributeError: 'str' object has no attribute 'keys'
